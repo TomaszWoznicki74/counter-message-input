@@ -1,16 +1,16 @@
 window.onload = init;
 
 function init() {
+  let inputElement = document.querySelector("input");
+  let counterElement = document.querySelector("#remaining-chars");
 
-let inputElement = document.querySelector('input');
+  let maxAllowedChars = inputElement.maxLength;
 
-inputElement.addEventListener('input',function(){
+  inputElement.addEventListener("input", function () {
     let enteredText = inputElement.value;
-    let counterElement = document.querySelector('#remaining-chars');
-    let result = 60 - enteredText.length;
+    let enteredTextlength = enteredText.length;
+    let result = maxAllowedChars - enteredTextlength;
 
     counterElement.textContent = result;
-
-})
-
+  });
 }
