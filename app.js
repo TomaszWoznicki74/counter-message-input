@@ -1,15 +1,15 @@
 window.onload = init;
 
 function init() {
-  let inputElement = document.querySelector("input");
-  let counterElement = document.querySelector("#remaining-chars");
+  const inputElement = document.querySelector("input");
+  const counterElement = document.querySelector("#remaining-chars");
 
-  let maxAllowedChars = inputElement.maxLength;
+  const maxAllowedChars = inputElement.maxLength;
 
   inputElement.addEventListener("input", function () {
-    let enteredText = inputElement.value;
-    let enteredTextlength = enteredText.length;
-    let result = maxAllowedChars - enteredTextlength;
+    const enteredText = inputElement.value;
+    const enteredTextlength = enteredText.length;
+    const result = maxAllowedChars - enteredTextlength;
 
     counterElement.textContent = result;
   });
